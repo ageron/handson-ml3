@@ -13,10 +13,10 @@ scipy~=1.7.1
 ##### Machine Learning packages
 scikit-learn~=1.0
 
-# Optional: the XGBoost library is only used in chapter 7
+# Optional: the XGBoost library is only used in chapter 6
 xgboost~=1.4.2
 
-# Optional: the transformers library is only using in chapter 16
+# Optional: the transformers library is only using in chapter 15
 transformers~=4.11.3
 
 ##### TensorFlow-related packages
@@ -28,7 +28,7 @@ transformers~=4.11.3
 # installation instructions.
 
 tensorflow~=2.6.0
-# Optional: the TF Serving API library is just needed for chapter 19.
+# Optional: the TF Serving API library is just needed for chapter 18.
 tensorflow-serving-api~=2.6.0 # or tensorflow-serving-api-gpu if gpu
 
 tensorboard~=2.7.0
@@ -38,11 +38,9 @@ tensorflow-hub~=0.12.0
 tensorflow-probability~=0.14.1
 
 # Optional: only used in chapter 12.
-# NOT AVAILABLE ON WINDOWS
 tfx~=1.3.0
 
 # Optional: only used in chapter 15.
-# NOT AVAILABLE ON WINDOWS
 tensorflow-addons~=0.14.0
 
 ##### Reinforcement Learning library (chapter 17)
@@ -86,7 +84,7 @@ numexpr~=2.7.3
 nltk~=3.6.5
 urlextract~=1.4.0
 
-# Optional: these libraries are only used in chapter 16
+# Optional: these libraries are only used in chapter 15
 ftfy~=6.0.3
 
 # Optional: tqdm displays nice progress bars, ipywidgets for tqdm's notebook support
