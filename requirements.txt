@@ -11,7 +11,7 @@ pandas~=1.3.3
 scipy~=1.7.1
 
 ##### Machine Learning packages
-scikit-learn~=1.0
+scikit-learn~=1.0.1
 
 # Optional: the XGBoost library is only used in chapter 6
 xgboost~=1.4.2
@@ -53,9 +53,6 @@ gym[Box2D,atari,accept-rom-license]~=0.21.0
 # * Swig: http://www.swig.org/download.html
 # * Microsoft C++ Build Tools: https://visualstudio.microsoft.com/visual-cpp-build-tools/
 # It's much easier to use Anaconda instead.
-
-# On Windows, install atari_py using:
-# pip install --no-index -f https://github.com/Kojoley/atari-py/releases atari_py
 
 tf-agents~=0.10.0
 
