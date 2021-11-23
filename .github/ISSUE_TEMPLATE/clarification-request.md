@@ -10,9 +10,9 @@ assignees: ''
 Thanks for helping us improve this project!
 
 **Before you create this issue**
-Please make sure you are using the latest updated code and libraries: see https://github.com/ageron/handson-ml2/blob/master/INSTALL.md#update-this-project-and-its-libraries
+Please make sure you are using the latest updated code and libraries: see https://github.com/ageron/handson-ml3/blob/main/INSTALL.md#update-this-project-and-its-libraries
 
-Also please make sure to read the FAQ (https://github.com/ageron/handson-ml2#faq) and search for existing issues (both open and closed), as your question may already have been answered: https://github.com/ageron/handson-ml2/issues
+Also please make sure to read the FAQ (https://github.com/ageron/handson-ml3#faq) and search for existing issues (both open and closed), as your question may already have been answered: https://github.com/ageron/handson-ml3/issues
 
 **Describe what is unclear to you**
 Please provide a clear and concise description of what the problem is, and specify the notebook name and the cell number at which the problem occurs (or the chapter and page in the book).

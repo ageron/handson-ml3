@@ -16,34 +16,34 @@ Some general knowledge about `docker` infrastructure might be useful (that's an 
 The first option is to pull the image from Docker Hub (this will download about 1.9 GB of compressed data):
 
 ```bash
-$ docker pull ageron/handson-ml2
+$ docker pull ageron/handson-ml3
 ```
 
 **Note**: this is the CPU-only image. For GPU support, read the GPU section below.
 
-Alternatively, you can build the image yourself. This will be slower, but it will ensure the image is up to date, with the latest libraries. For this, assuming you already downloaded this project into the directory `/path/to/project/handson-ml2`:
+Alternatively, you can build the image yourself. This will be slower, but it will ensure the image is up to date, with the latest libraries. For this, assuming you already downloaded this project into the directory `/path/to/project/handson-ml3`:
 
 ```bash
-$ cd /path/to/project/handson-ml2/docker
+$ cd /path/to/project/handson-ml3/docker
 $ docker-compose build
 ```
 
 This will take quite a while, but is only required once.
 
-After the process is finished you have an `ageron/handson-ml2:latest` image, that will be the base for your experiments. You can confirm that by running the following command:
+After the process is finished you have an `ageron/handson-ml3:latest` image, that will be the base for your experiments. You can confirm that by running the following command:
 
 ```bash
 $ docker images
 REPOSITORY            TAG         IMAGE ID            CREATED             SIZE
-ageron/handson-ml2    latest      3ebafebc604a        2 minutes ago       4.87GB
+ageron/handson-ml3    latest      3ebafebc604a        2 minutes ago       4.87GB
 ```
 
 ### Run the notebooks
 
-Still assuming you already downloaded this project into the directory `/path/to/project/handson-ml2`, run the following commands to start the Jupyter server inside the container, which is named `handson-ml2`:
+Still assuming you already downloaded this project into the directory `/path/to/project/handson-ml3`, run the following commands to start the Jupyter server inside the container, which is named `handson-ml3`:
 
 ```bash
-$ cd /path/to/project/handson-ml2/docker
+$ cd /path/to/project/handson-ml3/docker
 $ docker-compose up
 ```
 
@@ -55,13 +55,13 @@ You can close the server just by pressing `Ctrl-C` in the terminal window.
 
 ### Using `make` (optional)
 
-If you have `make` installed on your computer, you can use it as a thin layer to run `docker-compose` commands. For example, executing `make rebuild` will actually run `docker-compose build --no-cache`, which will rebuild the image without using the cache. This ensures that your image is based on the latest version of the `continuumio/miniconda3` image which the `ageron/handson-ml2` image is based on.
+If you have `make` installed on your computer, you can use it as a thin layer to run `docker-compose` commands. For example, executing `make rebuild` will actually run `docker-compose build --no-cache`, which will rebuild the image without using the cache. This ensures that your image is based on the latest version of the `continuumio/miniconda3` image which the `ageron/handson-ml3` image is based on.
 
 If you don't have `make` (and you don't want to install it), just examine the contents of `Makefile` to see which `docker-compose` commands you can run instead.
 
 ### Run additional commands in the container
 
-Run `make exec` (or `docker-compose exec handson-ml2 bash`) while the server is running to run an additional `bash` shell inside the `handson-ml2` container. Now you're inside the environment prepared within the image.
+Run `make exec` (or `docker-compose exec handson-ml3 bash`) while the server is running to run an additional `bash` shell inside the `handson-ml3` container. Now you're inside the environment prepared within the image.
 
 One of the useful things that can be done there would be starting TensorBoard (for example with simple `tb` command, see bashrc file).
 
@@ -81,12 +81,12 @@ If you're running on Linux, and you have a TensorFlow-compatible GPU card (NVidi
 Next, edit the `docker-compose.yml` file:
 
 ```bash
-$ cd /path/to/project/handson-ml2/docker
+$ cd /path/to/project/handson-ml3/docker
 $ edit docker-compose.yml  # use your favorite editor
 ```
 
 * Replace `dockerfile: ./docker/Dockerfile` with `dockerfile: ./docker/Dockerfile.gpu`
-* Replace `image: ageron/handson-ml2:latest` with `image: ageron/handson-ml2:latest-gpu`
+* Replace `image: ageron/handson-ml3:latest` with `image: ageron/handson-ml3:latest-gpu`
 * If you want to use `docker-compose`, you will need version 1.28 or above for GPU support, and you must uncomment the whole `deploy` section in `docker-compose.yml`. 
 
 ### Prepare the image (once)
@@ -94,13 +94,13 @@ $ edit docker-compose.yml  # use your favorite editor
 If you want to pull the prebuilt image from Docker Hub (this will download over 3.5 GB of compressed data):
 
 ```bash
-$ docker pull ageron/handson-ml2:latest-gpu
+$ docker pull ageron/handson-ml3:latest-gpu
 ```
 
 If you prefer to build the image yourself:
 
 ```bash
-$ cd /path/to/project/handson-ml2/docker
+$ cd /path/to/project/handson-ml3/docker
 $ docker-compose build
 ```
 
@@ -109,7 +109,7 @@ $ docker-compose build
 If you have `docker-compose` version 1.28 or above, that's great! You can simply run:
 
 ```bash
-$ cd /path/to/project/handson-ml2/docker
+$ cd /path/to/project/handson-ml3/docker
 $ docker-compose up
 [...]
      or http://127.0.0.1:8888/?token=[...]
@@ -132,8 +132,8 @@ If you have a version of `docker-compose` earlier than 1.28, you will have to us
 If you are using Docker 19.03 or above, you can run:
 
 ```bash
-$ cd /path/to/project/handson-ml2
-$ docker run --name handson-ml2 --gpus all -p 8888:8888 -p 6006:6006 --log-opt mode=non-blocking --log-opt max-buffer-size=50m -v `pwd`:/home/devel/handson-ml2 ageron/handson-ml2:latest-gpu /opt/conda/envs/tf2/bin/jupyter notebook --ip='0.0.0.0' --port=8888 --no-browser
+$ cd /path/to/project/handson-ml3
+$ docker run --name handson-ml3 --gpus all -p 8888:8888 -p 6006:6006 --log-opt mode=non-blocking --log-opt max-buffer-size=50m -v `pwd`:/home/devel/handson-ml3 ageron/handson-ml3:latest-gpu /opt/conda/envs/tf2/bin/jupyter notebook --ip='0.0.0.0' --port=8888 --no-browser
 ```
 
 If you are using an older version of Docker, then replace `--gpus all` with `--runtime=nvidia`.
@@ -143,7 +143,7 @@ Now point your browser to the displayed URL: Jupyter should appear, and you can 
 Lastly, to interrupt the server, press Ctrl-C, then run:
 
 ```bash
-$ docker rm handson-ml2
+$ docker rm handson-ml3
 ```
 
 This will remove the container so you can start a new one later (but it will not remove the image or the notebooks, don't worry!).

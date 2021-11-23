@@ -6,10 +6,10 @@ To install this repository and run the Jupyter notebooks on your machine, you wi
 Next, clone this repository by opening a terminal and typing the following commands (do not type the first `$` on each line, it's just a convention to show that this is a terminal prompt, not something else like Python code):
 
     $ cd $HOME  # or any other development directory you prefer
-    $ git clone https://github.com/ageron/handson-ml2.git
-    $ cd handson-ml2
+    $ git clone https://github.com/ageron/handson-ml3.git
+    $ cd handson-ml3
 
-If you do not want to install git, you can instead download [master.zip](https://github.com/ageron/handson-ml2/archive/master.zip), unzip it, rename the resulting directory to `handson-ml2` and move it to your development directory.
+If you do not want to install git, you can instead download [main.zip](https://github.com/ageron/handson-ml3/archive/main.zip), unzip it, rename the resulting directory to `handson-ml3` and move it to your development directory.
 
 ## Install Anaconda
 Next, you will need Python 3 and a bunch of Python libraries. The simplest way to install these is to [download and install Anaconda](https://www.anaconda.com/distribution/), which is a great cross-platform Python distribution for scientific computing. It comes bundled with many scientific libraries, including NumPy, Pandas, Matplotlib, Scikit-Learn and much more, so it's quite a large installation. If you prefer a lighter weight Anaconda distribution, you can [install Miniconda](https://docs.conda.io/en/latest/miniconda.html), which contains the bare minimum to run the `conda` packaging tool. You should install the latest version of Anaconda (or Miniconda) available.
@@ -29,7 +29,7 @@ Once Anaconda (or Miniconda) is installed, run the following command to update t
 If you have a TensorFlow-compatible GPU card (NVidia card with Compute Capability ≥ 3.5), and you want TensorFlow to use it, then you should download the latest driver for your card from [nvidia.com](https://www.nvidia.com/Download/index.aspx?lang=en-us) and install it. You will also need NVidia's CUDA and cuDNN libraries, but the good news is that they will be installed automatically when you install the tensorflow-gpu package from Anaconda. However, if you don't use Anaconda, you will have to install them manually. If you hit any roadblock, see TensorFlow's [GPU installation instructions](https://tensorflow.org/install/gpu) for more details.
 
 ## Create the `tf2` Environment
-Next, make sure you're in the `handson-ml2` directory and run the following command. It will create a new `conda` environment containing every library you will need to run all the notebooks (by default, the environment will be named `tf2`, but you can choose another name using the `-n` option):
+Next, make sure you're in the `handson-ml3` directory and run the following command. It will create a new `conda` environment containing every library you will need to run all the notebooks (by default, the environment will be named `tf2`, but you can choose another name using the `-n` option):
 
     $ conda env create -f environment.yml
 
@@ -54,7 +54,7 @@ Congrats! You are ready to learn Machine Learning, hands on!
 When you're done with Jupyter, you can close it by typing Ctrl-C in the Terminal window where you started it. Every time you want to work on this project, you will need to open a Terminal, and run:
 
     $ cd $HOME # or whatever development directory you chose earlier
-    $ cd handson-ml2
+    $ cd handson-ml3
     $ conda activate tf2
     $ jupyter notebook
 
@@ -64,7 +64,7 @@ I regularly update the notebooks to fix issues and add support for new libraries
 For this, open a terminal, and run:
 
     $ cd $HOME # or whatever development directory you chose earlier
-    $ cd handson-ml2 # go to this project's directory
+    $ cd handson-ml3 # go to this project's directory
     $ git pull
 
 If you get an error, it's probably because you modified a notebook. In this case, before running `git pull` you will first need to commit your changes. I recommend doing this in your own branch, or else you may get conflicts:
@@ -72,7 +72,7 @@ If you get an error, it's probably because you modified a notebook. In this case
     $ git checkout -b my_branch # you can use another branch name if you want
     $ git add -u
     $ git commit -m "describe your changes here"
-    $ git checkout master
+    $ git checkout main
     $ git pull
 
 Next, let's update the libraries. First, let's update `conda` itself:

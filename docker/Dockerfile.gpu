@@ -27,7 +27,7 @@ ARG LIBNVINFER_MAJOR_VERSION=7
 # Needed for string substitution
 SHELL ["/bin/bash", "-c"]
 # Pick up some TF dependencies
-# [HOML2] Tweaked for handson-ml2: added all the libs before build-essentials
+# [HOML2] Tweaked for handson-ml3: added all the libs before build-essentials
 #         and call apt clean + remove apt cache.
 RUN apt-get update -q && apt-get install -q -y --no-install-recommends \
         bzip2 \
@@ -87,7 +87,7 @@ RUN ln -s /usr/local/cuda/lib64/stubs/libcuda.so /usr/local/cuda/lib64/stubs/lib
     && echo "/usr/local/cuda/lib64/stubs" > /etc/ld.so.conf.d/z-cuda-stubs.conf \
     && ldconfig
 
-# [HOML2] Tweaked for handson-ml2: removed Python3 & TensorFlow installation using pip
+# [HOML2] Tweaked for handson-ml3: removed Python3 & TensorFlow installation using pip
 
 #################################################
 #### End of tensorflow/tensorflow:latest-gpu ####
@@ -102,7 +102,7 @@ ENV PATH /opt/conda/bin:/opt/conda/envs/tf2/bin:$PATH
 #### FROM continuumio/miniconda3:latest ####
 ############################################
 
-# [HOML2] Tweaked for handson-ml2: removed the beginning of the Dockerfile
+# [HOML2] Tweaked for handson-ml3: removed the beginning of the Dockerfile
 CMD [ "/bin/bash" ]
 
 # Leave these args here to better use the Docker build cache
@@ -141,7 +141,7 @@ ARG username
 ARG userid
 
 ARG home=/home/${username}
-ARG workdir=${home}/handson-ml2
+ARG workdir=${home}/handson-ml3
 
 RUN adduser ${username} --uid ${userid} --gecos '' --disabled-password \
     && echo "${username} ALL=(root) NOPASSWD:ALL" > /etc/sudoers.d/${username} \
@@ -156,7 +156,7 @@ WORKDIR ${workdir}
 
 # The config below enables diffing notebooks with nbdiff (and nbdiff support
 # in git diff command) after connecting to the container by "make exec" (or
-# "docker-compose exec handson-ml2 bash")
+# "docker-compose exec handson-ml3 bash")
 #       You may also try running:
 #         nbdiff NOTEBOOK_NAME.ipynb
 #       to get nbdiff between checkpointed version and current version of the

@@ -31,7 +31,7 @@ ARG username
 ARG userid
 
 ARG home=/home/${username}
-ARG workdir=${home}/handson-ml2
+ARG workdir=${home}/handson-ml3
 
 RUN adduser ${username} --uid ${userid} --gecos '' --disabled-password \
     && echo "${username} ALL=(root) NOPASSWD:ALL" > /etc/sudoers.d/${username} \
@@ -47,7 +47,7 @@ ENV PATH /opt/conda/envs/tf2/bin:$PATH
 
 # The config below enables diffing notebooks with nbdiff (and nbdiff support
 # in git diff command) after connecting to the container by "make exec" (or
-# "docker-compose exec handson-ml2 bash")
+# "docker-compose exec handson-ml3 bash")
 #       You may also try running:
 #         nbdiff NOTEBOOK_NAME.ipynb
 #       to get nbdiff between checkpointed version and current version of the
