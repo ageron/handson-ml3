@@ -28,18 +28,18 @@ Once Anaconda (or Miniconda) is installed, run the following command to update t
 ## Install the GPU Driver and Libraries
 If you have a TensorFlow-compatible GPU card (NVidia card with Compute Capability ≥ 3.5), and you want TensorFlow to use it, then you should download the latest driver for your card from [nvidia.com](https://www.nvidia.com/Download/index.aspx?lang=en-us) and install it. You will also need NVidia's CUDA and cuDNN libraries, but the good news is that they will be installed automatically when you install the tensorflow-gpu package from Anaconda. However, if you don't use Anaconda, you will have to install them manually. If you hit any roadblock, see TensorFlow's [GPU installation instructions](https://tensorflow.org/install/gpu) for more details.
 
-## Create the `tf2` Environment
-Next, make sure you're in the `handson-ml3` directory and run the following command. It will create a new `conda` environment containing every library you will need to run all the notebooks (by default, the environment will be named `tf2`, but you can choose another name using the `-n` option):
+## Create the `homl3` Environment
+Next, make sure you're in the `handson-ml3` directory and run the following command. It will create a new `conda` environment containing every library you will need to run all the notebooks (by default, the environment will be named `homl3`, but you can choose another name using the `-n` option):
 
     $ conda env create -f environment.yml
 
 Next, activate the new environment:
 
-    $ conda activate tf2
+    $ conda activate homl3
 
 
 ## Start Jupyter
-You're almost there! You just need to register the `tf2` conda environment to Jupyter. The notebooks in this project will default to the environment named `python3`, so it's best to register this environment using the name `python3` (if you prefer to use another name, you will have to select it in the "Kernel > Change kernel..." menu in Jupyter every time you open a notebook):
+You're almost there! You just need to register the `homl3` conda environment to Jupyter. The notebooks in this project will default to the environment named `python3`, so it's best to register this environment using the name `python3` (if you prefer to use another name, you will have to select it in the "Kernel > Change kernel..." menu in Jupyter every time you open a notebook):
 
     $ python3 -m ipykernel install --user --name=python3
 
@@ -55,7 +55,7 @@ When you're done with Jupyter, you can close it by typing Ctrl-C in the Terminal
 
     $ cd $HOME # or whatever development directory you chose earlier
     $ cd handson-ml3
-    $ conda activate tf2
+    $ conda activate homl3
     $ jupyter notebook
 
 ## Update This Project and its Libraries
@@ -79,10 +79,10 @@ Next, let's update the libraries. First, let's update `conda` itself:
 
     $ conda update -c defaults -n base conda
 
-Then we'll delete this project's `tf2` environment:
+Then we'll delete this project's `homl3` environment:
 
     $ conda activate base
-    $ conda env remove -n tf2
+    $ conda env remove -n homl3
 
 And recreate the environment:
 
@@ -90,5 +90,5 @@ And recreate the environment:
 
 Lastly, we reactivate the environment and start Jupyter:
 
-    $ conda activate tf2
+    $ conda activate homl3
     $ jupyter notebook

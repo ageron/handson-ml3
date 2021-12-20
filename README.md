@@ -44,7 +44,7 @@ Next, clone this project by opening a terminal and typing the following commands
 Next, run the following commands:
 
     $ conda env create -f environment.yml
-    $ conda activate tf2
+    $ conda activate homl3
     $ python -m ipykernel install --user --name=python3
 
 Finally, start Jupyter:

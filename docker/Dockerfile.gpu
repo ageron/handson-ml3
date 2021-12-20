@@ -94,7 +94,7 @@ RUN ln -s /usr/local/cuda/lib64/stubs/libcuda.so /usr/local/cuda/lib64/stubs/lib
 #################################################
 
 ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
-ENV PATH /opt/conda/bin:/opt/conda/envs/tf2/bin:$PATH
+ENV PATH /opt/conda/bin:/opt/conda/envs/homl3/bin:$PATH
 
 # Next we need to install miniconda
 
