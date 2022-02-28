@@ -27,9 +27,9 @@ transformers~=4.16.2
 # you must install CUDA, cuDNN and more: see tensorflow.org for the detailed
 # installation instructions.
 
-tensorflow~=2.7.1
+tensorflow~=2.8.0
 # Optional: the TF Serving API library is just needed for chapter 18.
-tensorflow-serving-api~=2.7.0 # or tensorflow-serving-api-gpu if gpu
+tensorflow-serving-api~=2.8.0  # or tensorflow-serving-api-gpu if gpu
 
 tensorboard~=2.8.0
 tensorboard-plugin-profile~=2.5.0
@@ -37,7 +37,7 @@ tensorflow-datasets~=4.5.2
 tensorflow-hub~=0.12.0
 
 # Optional: used in chapters 11 & 16 (for AdamW & seq2seq)
-tensorflow-addons~=0.15.0
+tensorflow-addons~=0.16.1
 
 ##### Reinforcement Learning library (chapter 18)
 
@@ -56,7 +56,7 @@ Pillow~=9.0.0
 graphviz~=0.19.1
 pyglet~=1.5.21
 
-#pyvirtualdisplay # needed in chapter 18, if on a headless server
+#pyvirtualdisplay  # needed in chapter 18, if on a headless server
                   # (i.e., without screen, e.g., Colab or VM)
 
 
