@@ -31,6 +31,7 @@ dependencies:
   - wheel  # built-package format for pip
   - widgetsnbextension=3.5  # interactive HTML widgets for Jupyter notebooks
   - pip:
+    - keras-tuner~=1.1.2  # used in chapters 10 and 19 for hyperparameter tuning
     - tensorboard-plugin-profile~=2.5.0  # profiling plugin for TensorBoard
     - tensorboard~=2.8.0  # TensorFlow's visualization toolkit
     - tensorflow-addons~=0.16.1  # used in chapters 11 & 16 (for AdamW & seq2seq)
@@ -41,3 +42,5 @@ dependencies:
     - transformers~=4.16.2  # Natural Language Processing lib for TF or PyTorch
     - urlextract~=1.5.0  # optionally used in chapter 3, exercise 4
     - gym[atari,accept-rom-license]~=0.21.0  # used only in chapter 18
+    - google-cloud-aiplatform~=1.12.0  # used only in chapter 19
+    - google-cloud-storage~=2.2.1  # used only in chapter 19

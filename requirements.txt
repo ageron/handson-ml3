@@ -36,6 +36,9 @@ tensorboard-plugin-profile~=2.5.0
 tensorflow-datasets~=4.5.2
 tensorflow-hub~=0.12.0
 
+# Used in chapter 10 and 19 for hyperparameter tuning
+keras-tuner~=1.1.2
+
 # Optional: used in chapters 11 & 16 (for AdamW & seq2seq)
 tensorflow-addons~=0.16.1
 
@@ -59,6 +62,10 @@ pyglet~=1.5.21
 #pyvirtualdisplay  # needed in chapter 18, if on a headless server
                   # (i.e., without screen, e.g., Colab or VM)
 
+
+##### Google Cloud Platform - used only in chapter 19
+google-cloud-aiplatform~=1.12.0
+google-cloud-storage~=2.2.1
 
 ##### Additional utilities
 
