@@ -16,7 +16,7 @@ scikit-learn~=1.0.2
 # Optional: the XGBoost library is only used in chapter 7
 xgboost~=1.5.0
 
-# Optional: the transformers library is only using in chapter 16
+# Optional: the transformers library is only used in chapter 16
 transformers~=4.16.2
 
 ##### TensorFlow-related packages

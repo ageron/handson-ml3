@@ -75,7 +75,7 @@ Notes:
     - Fill in missing values (e.g., with zero, mean, median...) or drop their rows (or columns).  
 2. Feature selection (optional):  
     - Drop the attributes that provide no useful information for the task.  
-3. Feature engineering, where appropriates:  
+3. Feature engineering, where appropriate:  
     - Discretize continuous features.  
     - Decompose features (e.g., categorical, date/time, etc.).  
     - Add promising transformations of features (e.g., log(x), sqrt(x), x^2, etc.).
@@ -104,8 +104,8 @@ Notes:
 
 1. Fine-tune the hyperparameters using cross-validation.  
     - Treat your data transformation choices as hyperparameters, especially when you are not sure about them (e.g., should I replace missing values with zero or the median value? Or just drop the rows?).  
-    - Unless there are very few hyperparamter values to explore, prefer random search over grid search. If training is very long, you may prefer a Bayesian optimization approach (e.g., using a Gaussian process priors, as described by Jasper Snoek, Hugo Larochelle, and Ryan Adams ([https://goo.gl/PEFfGr](https://goo.gl/PEFfGr)))  
-2. Try Ensemble methods. Combining your best models will often perform better than running them invdividually.  
+    - Unless there are very few hyperparameter values to explore, prefer random search over grid search. If training is very long, you may prefer a Bayesian optimization approach (e.g., using a Gaussian process priors, as described by Jasper Snoek, Hugo Larochelle, and Ryan Adams ([https://goo.gl/PEFfGr](https://goo.gl/PEFfGr)))  
+2. Try Ensemble methods. Combining your best models will often perform better than running them individually.  
 3. Once you are confident about your final model, measure its performance on the test set to estimate the generalization error.
 
 > Don't tweak your model after measuring the generalization error: you would just start overfitting the test set.  
@@ -125,5 +125,5 @@ Notes:
 2. Write monitoring code to check your system's live performance at regular intervals and trigger alerts when it drops.  
     - Beware of slow degradation too: models tend to "rot" as data evolves.   
     - Measuring performance may require a human pipeline (e.g., via a crowdsourcing service).  
-    - Also monitor your inputs' quality (e.g., a malfunctioning sensor sending random values, or another team's output becoming stale). This is  particulary important for online learning systems.  
+    - Also monitor your inputs' quality (e.g., a malfunctioning sensor sending random values, or another team's output becoming stale). This is particularly important for online learning systems.  
 3. Retrain your models on a regular basis on fresh data (automate as much as possible).  
