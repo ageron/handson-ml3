@@ -12,7 +12,7 @@ Next, clone this repository by opening a terminal and typing the following comma
 If you do not want to install git, you can instead download [main.zip](https://github.com/ageron/handson-ml3/archive/main.zip), unzip it, rename the resulting directory to `handson-ml3` and move it to your development directory.
 
 ## Install Anaconda
-Next, you will need Python 3 and a bunch of Python libraries. The simplest way to install these is to [download and install Anaconda](https://www.anaconda.com/distribution/), which is a great cross-platform Python distribution for scientific computing. It comes bundled with many scientific libraries, including NumPy, Pandas, Matplotlib, Scikit-Learn and much more, so it's quite a large installation. If you prefer a lighter weight Anaconda distribution, you can [install Miniconda](https://docs.conda.io/en/latest/miniconda.html), which contains the bare minimum to run the `conda` packaging tool. You should install the latest version of Anaconda (or Miniconda) available.
+Next, you will need Python 3 and a bunch of Python libraries. The simplest way to install these is to [download and install Anaconda](https://www.anaconda.com/distribution/), which is a great cross-platform Python distribution for scientific computing. It comes bundled with many scientific libraries, including NumPy, Pandas, Matplotlib, Scikit-Learn and much more, so it's quite a large installation. If you prefer a lighter weight Anaconda distribution, you can [install Miniconda](https://docs.conda.io/en/latest/miniconda.html), which contains the bare minimum to run the `conda` packaging tool. You should install the latest version of Anaconda (or Miniconda) available. For a machine with Apple Silicon (`arm64` architecture), you'll have to install [Miniforge](https://github.com/conda-forge/miniforge) instead of Miniconda and some other tools (see the [next section](#install-tensorflow-and-other-libraries-on-mac-with-apple-silicon) for the details).
 
 During the installation on MacOSX and Linux, you will be asked whether to initialize Anaconda by running `conda init`: you should accept, as it will update your shell script to ensure that `conda` is available whenever you open a terminal. After the installation, you must close your terminal and open a new one for the changes to take effect.
 
@@ -22,7 +22,21 @@ Once Anaconda (or Miniconda) is installed, run the following command to update t
 
     $ conda update -n base -c defaults conda
 
-> **Note**: if you don't like Anaconda for some reason, then you can install Python 3 and use pip to install the required libraries manually (this is not recommended, unless you really know what you are doing). I recommend using Python 3.7, since some libs don't support Python 3.8 or 3.9 yet.
+> **Note**: if you don't like Anaconda for some reason, then you can install Python 3 and use pip to install the required libraries manually (this is not recommended, unless you really know what you are doing). I recommend using Python 3.9, since some libs don't support Python 3.10 yet.
+
+## Install TensorFlow and other libraries on Mac with Apple Silicon
+It is possible to run TensorFlow on the machines with Apple Silicon (`arm64` architecture) natively and accelerate training with Metal on Mac GPUs by using [Apple's plugin for TensorFlow](https://developer.apple.com/metal/tensorflow-plugin/). First, you have to install [Miniforge](https://github.com/conda-forge/miniforge) (and remove Anaconda or Miniconda beforehand if already installed). If you have [`brew`](https://brew.sh/), simply run `brew install miniforge`. Otherwise, download the installation script and run it manually:
+
+    $ curl -L -O https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-MacOSX-arm64.sh
+    $ sh Miniforge3-MacOSX-arm64.sh
+
+To initialize `conda` run `conda init zsh`.
+
+To install `transformers` library (used in Chapter 16), you need to [install rust](https://www.rust-lang.org/tools/install) to compile a required `tokenizers` package that does not provide a binary wheel for `arm64` architecture yet:
+
+    $ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+Now you should be ready to proceed with the [next steps](#create-the-homl3-environment), but instead of `environment.yml` use `environment-apple-silicon.yml` (e.g., `conda env create -f environment-apple-silicon.yml`).
 
 
 ## Install the GPU Driver and Libraries
