@@ -28,6 +28,7 @@ dependencies:
   - requests=2.28  # used only in chapter 19 for REST API queries
   - scikit-learn=1.1  # machine learning library
   - scipy=1.9  # scientific/technical computing library
+  - statsmodels=0.13  # used only in chapter 15 for time series analysis
   - tqdm=4.64  # a progress bar library
   - wheel  # built-package format for pip
   - widgetsnbextension=4.0  # interactive HTML widgets for Jupyter notebooks

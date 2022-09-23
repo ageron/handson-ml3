@@ -96,3 +96,6 @@ ipywidgets~=8.0.2
 
 # Optional: pydot is only used in chapter 10 for tf.keras.utils.plot_model()
 pydot~=1.4.2
+
+# Optional: statsmodels is only used in chapter 15 for time series analysis
+statsmodels~=0.13.2
