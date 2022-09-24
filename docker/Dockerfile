@@ -12,15 +12,13 @@ RUN apt-get update && apt-get install -y \
         sudo \
         unzip \
         xorg-dev \
-        xvfb \
         zip \
         zlib1g-dev \
     && apt clean \
     && rm -rf /var/lib/apt/lists/*
 
 COPY environment.yml /tmp/
-RUN echo '    - pyvirtualdisplay' >> /tmp/environment.yml \
-    && conda env create -f /tmp/environment.yml \
+RUN conda env create -f /tmp/environment.yml \
     && conda clean -afy \
     && find /opt/conda/ -follow -type f -name '*.a' -delete \
     && find /opt/conda/ -follow -type f -name '*.pyc' -delete \

@@ -49,7 +49,6 @@ RUN apt-get update -q && apt-get install -q -y --no-install-recommends \
         swig \
         wget \
         xorg-dev \
-        xvfb \
         zip \
         zlib1g-dev \
         build-essential \
@@ -129,8 +128,7 @@ RUN wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-${CONDA_VERSION}
 # Now we're ready to create our conda environment
 
 COPY environment.yml /tmp/
-RUN echo '    - pyvirtualdisplay' >> /tmp/environment.yml \
-    && conda env create -f /tmp/environment.yml \
+RUN conda env create -f /tmp/environment.yml \
     && conda clean -afy \
     && find /opt/conda/ -follow -type f -name '*.a' -delete \
     && find /opt/conda/ -follow -type f -name '*.pyc' -delete \
