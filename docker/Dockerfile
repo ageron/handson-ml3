@@ -1,19 +1,7 @@
 FROM continuumio/miniconda3:latest
 
 RUN apt-get update && apt-get install -y \
-        build-essential \
-        cmake \
-        ffmpeg \
-        git \
-        libboost-all-dev \
-        libjpeg-dev \
-        libpq-dev \
-        libsdl2-dev swig \
         sudo \
-        unzip \
-        xorg-dev \
-        zip \
-        zlib1g-dev \
     && apt clean \
     && rm -rf /var/lib/apt/lists/*
 

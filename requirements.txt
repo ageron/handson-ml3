@@ -57,7 +57,6 @@ gym[Box2D,atari,accept-rom-license]~=0.26.1
 ##### Image manipulation
 Pillow~=9.2.0
 graphviz~=0.20.1
-pyglet~=1.5.26
 
 ##### Google Cloud Platform - used only in chapter 19
 google-cloud-aiplatform~=1.17.0
@@ -81,9 +80,6 @@ numexpr~=2.8.3
 # Optional: these libraries can be useful in chapter 3, exercise 4.
 nltk~=3.7
 urlextract~=1.6.0
-
-# Optional: these libraries are only used in chapter 16
-ftfy~=6.1.1
 
 # Optional: tqdm displays nice progress bars, ipywidgets for tqdm's notebook
 #           support
