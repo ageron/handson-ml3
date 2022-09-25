@@ -8,7 +8,7 @@ dependencies:
   - graphviz  # used only in chapter 6 for dot files
   - python-graphviz  # used only in chapter 6 for dot files
   - ipython=8.5  # a powerful Python shell
-  - ipywidgets=8.0  # optionally used only in chapter 11 for tqdm in Jupyter
+  - ipywidgets=8.0  # optionally used only in chapter 12 for tqdm in Jupyter
   - joblib=1.1  # used only in chapter 2 to save/load Scikit-Learn models
   - jupyterlab=3.4  # to edit and run Jupyter notebooks
   - matplotlib=3.5  # beautiful plots. See tutorial tools_matplotlib.ipynb
@@ -28,7 +28,7 @@ dependencies:
   - scikit-learn=1.1  # machine learning library
   - scipy=1.9  # scientific/technical computing library
   - statsmodels=0.13  # used only in chapter 15 for time series analysis
-  - tqdm=4.64  # a progress bar library
+  - tqdm=4.64  # used only in chapter 12 to display nice progress bars
   - wheel  # built-package format for pip
   - widgetsnbextension=4.0  # interactive HTML widgets for Jupyter notebooks
   - pip:
@@ -42,6 +42,6 @@ dependencies:
     - tensorflow~=2.10.0  # Deep Learning library
     - transformers~=4.21.3  # Natural Language Processing lib for TF or PyTorch
     - urlextract~=1.6.0  # optionally used in chapter 3, exercise 4
-    - gym[atari,accept-rom-license]~=0.21.0  # used only in chapter 18
+    - gym[atari,accept-rom-license]~=0.26.1  # used only in chapter 18
     - google-cloud-aiplatform~=1.17.0  # used only in chapter 19
     - google-cloud-storage~=2.5.0  # used only in chapter 19
