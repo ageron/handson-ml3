@@ -11,17 +11,22 @@ python. It contains the example code and solutions to the exercises in the third
 ## Quick Start
 
 ### Want to play with these notebooks online without having to install anything?
-Use any of the following services (I recommended Colab or Kaggle, since they offer free GPUs and TPUs).
 
-**WARNING**: _Please be aware that these services provide temporary environments: anything you do will be deleted after a while, so make sure you download any data you care about._
+* <a href="https://colab.research.google.com/github/ageron/handson-ml3/blob/main/" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a> (recommended)
 
-* <a href="https://colab.research.google.com/github/ageron/handson-ml3/blob/main/" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+**WARNING**: _Please be aware that Colab provides a temporary environment: anything you do will be deleted after a while, so make sure you download any data you care about._
+
+Alternatively, you can try these other services, which also provide temporary environments:
+
+<details>
 
 * <a href="https://homl.info/kaggle3/"><img src="https://kaggle.com/static/images/open-in-kaggle.svg" alt="Open in Kaggle" /></a>
 
 * <a href="https://mybinder.org/v2/gh/ageron/handson-ml3/HEAD?filepath=%2Findex.ipynb"><img src="https://mybinder.org/badge_logo.svg" alt="Launch binder" /></a>
 
 * <a href="https://homl.info/deepnote3/"><img src="https://deepnote.com/buttons/launch-in-deepnote-small.svg" alt="Launch in Deepnote" /></a>
+
+</details>
 
 ### Just want to quickly look at some notebooks, without executing any code?
 
@@ -57,15 +62,15 @@ If you need further instructions, read the [detailed installation instructions](
 
 **Which Python version should I use?**
 
-I recommend Python 3.8. If you follow the installation instructions above, that's the version you will get. Most code will work with other versions of Python 3, but some libraries do not support Python 3.9 or 3.10 yet, which is why I recommend Python 3.8.
+I recommend Python 3.10. If you follow the installation instructions above, that's the version you will get. Any version ≥3.7 should work as well.
 
 **I'm getting an error when I call `load_housing_data()`**
 
-Make sure you call `fetch_housing_data()` *before* you call `load_housing_data()`. If you're getting an HTTP error, make sure you're running the exact same code as in the notebook (copy/paste it if needed). If the problem persists, please check your network configuration.
+If you're getting an HTTP error, make sure you're running the exact same code as in the notebook (copy/paste it if needed). If the problem persists, please check your network configuration. If it's an SSL error, see the next question.
 
 **I'm getting an SSL error on MacOSX**
 
-You probably need to install the SSL certificates (see this [StackOverflow question](https://stackoverflow.com/questions/27835619/urllib-and-ssl-certificate-verify-failed-error)). If you downloaded Python from the official website, then run `/Applications/Python\ 3.8/Install\ Certificates.command` in a terminal (change `3.8` to whatever version you installed). If you installed Python using MacPorts, run `sudo port install curl-ca-bundle` in a terminal.
+You probably need to install the SSL certificates (see this [StackOverflow question](https://stackoverflow.com/questions/27835619/urllib-and-ssl-certificate-verify-failed-error)). If you downloaded Python from the official website, then run `/Applications/Python\ 3.10/Install\ Certificates.command` in a terminal (change `3.10` to whatever version you installed). If you installed Python using MacPorts, run `sudo port install curl-ca-bundle` in a terminal.
 
 **I've installed this project locally. How do I update it to the latest version?**
 
