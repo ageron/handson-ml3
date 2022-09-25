@@ -14,11 +14,11 @@ python. It contains the example code and solutions to the exercises in the third
 
 * <a href="https://colab.research.google.com/github/ageron/handson-ml3/blob/main/" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a> (recommended)
 
-**WARNING**: _Please be aware that Colab provides a temporary environment: anything you do will be deleted after a while, so make sure you download any data you care about._
-
-Alternatively, you can try these other services, which also provide temporary environments:
+⚠ _Colab provides a temporary environment: anything you do will be deleted after a while, so make sure you download any data you care about._
 
 <details>
+
+Other services may work as well, but I have not fully tested them:
 
 * <a href="https://homl.info/kaggle3/"><img src="https://kaggle.com/static/images/open-in-kaggle.svg" alt="Open in Kaggle" /></a>
 
