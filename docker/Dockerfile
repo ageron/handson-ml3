@@ -1,6 +1,7 @@
 FROM continuumio/miniconda3:latest
 
 RUN apt-get update && apt-get install -y \
+        protobuf-compiler \
         sudo \
     && apt clean \
     && rm -rf /var/lib/apt/lists/*
