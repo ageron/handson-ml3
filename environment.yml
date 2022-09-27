@@ -4,6 +4,7 @@ channels:
   - defaults
 dependencies:
   - box2d-py=2.3  # used only in chapter 18, exercise 8
+  - ffmpeg=5.1  # used only in the matplotlib tutorial to generate animations
   - graphviz  # used only in chapter 6 for dot files
   - python-graphviz  # used only in chapter 6 for dot files
   - ipython=8.5  # a powerful Python shell
