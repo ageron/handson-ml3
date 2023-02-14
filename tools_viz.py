@@ -16,7 +16,8 @@ def save_fig(IMAGES_PATH, fig_id, tight_layout=True, fig_extension="png", resolu
         plt.tight_layout()
     plt.savefig(path, format=fig_extension, dpi=resolution)
 
-def plot_decision_boundary(clf, X, y, axes, cmap):
+def plot_decision_boundary(clf, X, y, cmap, axes=[-1.5, 2.4, -1, 1.5], alpha=1.0):
+    # axes=[-1.5, 2.4, -1, 1.5]
     x1, x2 = np.meshgrid(np.linspace(axes[0], axes[1], 100),
                          np.linspace(axes[2], axes[3], 100))
     X_new = np.c_[x1.ravel(), x2.ravel()]
@@ -41,3 +42,23 @@ def plot_regression_predictions(tree_reg, X, y, axes=[-0.5, 0.5, -0.05, 0.25]):
     plt.plot(X, y, "b.")
     plt.plot(x1, y_pred, "r.-", linewidth=2, label=r"$\hat{y}$")
     
+# def plot_decision_boundary(clf, X, y, alpha=1.0):
+    # """
+    # from 07_ensemble_learning_and_random_forests
+    # """
+#     axes=[-1.5, 2.4, -1, 1.5]
+#     x1, x2 = np.meshgrid(np.linspace(axes[0], axes[1], 100),
+#                          np.linspace(axes[2], axes[3], 100))
+#     X_new = np.c_[x1.ravel(), x2.ravel()]
+#     y_pred = clf.predict(X_new).reshape(x1.shape)
+    
+#     plt.contourf(x1, x2, y_pred, alpha=0.3 * alpha, cmap='Wistia')
+#     plt.contour(x1, x2, y_pred, cmap="Greys", alpha=0.8 * alpha)
+#     colors = ["#78785c", "#c47b27"]
+#     markers = ("o", "^")
+#     for idx in (0, 1):
+#         plt.plot(X[:, 0][y == idx], X[:, 1][y == idx],
+#                  color=colors[idx], marker=markers[idx], linestyle="none")
+#     plt.axis(axes)
+#     plt.xlabel(r"$x_1$")
+#     plt.ylabel(r"$x_2$", rotation=0)
