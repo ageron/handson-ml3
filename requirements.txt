@@ -91,3 +91,5 @@ pydot~=1.4.2
 
 # Optional: statsmodels is only used in chapter 15 for time series analysis
 statsmodels~=0.13.2
+
+# Optional: Use ChatGTP to make your code
