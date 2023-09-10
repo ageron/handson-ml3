@@ -16,6 +16,11 @@ python. It contains the example code and solutions to the exercises in the third
 
 ⚠ _Colab provides a temporary environment: anything you do will be deleted after a while, so make sure you download any data you care about._
 
+You can also run these notebooks inside dev containers:
+
+* [![Open in Visual Studio Code](https://img.shields.io/static/v1?label=&message=Open%20in%20Visual%20Studio%20Code&color=blue&logo=visualstudiocode&style=flat)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/ageron/handson-ml3)
+* [![Open in Github Codespaces](https://img.shields.io/static/v1?label=&message=Open%20in%20Github%20Codespaces&color=2f362d&logo=github)](https://codespaces.new/ageron/handson-ml3?quickstart=1&hide_repo_select=true)
+
 <details>
 
 Other services may work as well, but I have not fully tested them:
