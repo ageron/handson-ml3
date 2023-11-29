@@ -15,3 +15,10 @@ my_*
 /person.desc
 /person_pb2.py
 /datasets
+
+*.swp
+.DS_Store
+.idea/
+constant/out/
+constant/private/
+constant/sweeper/

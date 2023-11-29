@@ -20,7 +20,7 @@ class NotebookAnalyser:
                 NotebookAnalyser.COLOR_GREEN,
                 NotebookAnalyser.COLOR_YELLOW,
             ]:
-                self._colors[color] =    "\033[{}m".format(color)
+                self._colors[color] = f"\033[{color}m"
 
     NOTEBOOK_SUFFIX = ".ipynb"
     CHECKPOINT_DIR = NOTEBOOK_SUFFIX + "_checkpoints"
@@ -47,20 +47,17 @@ class NotebookAnalyser:
     def log(self, message, file, color=COLOR_WHITE):
         color_on = self._colors[color]
         color_off = self._colors[NotebookAnalyser.COLOR_WHITE]
-        print("{}{}{}: {}".format(color_on, message, color_off, file))
+        print(f"{color_on}{message}{color_off}: {file}")
 
     def clean_checkpoints(self, directory):
+        status = ""
         for checkpoint_path in sorted(glob.glob(os.path.join(directory, NotebookAnalyser.CHECKPOINT_MASK))):
 
             workfile_dir = os.path.dirname(os.path.dirname(checkpoint_path))
             workfile_name = os.path.basename(checkpoint_path)[:-NotebookAnalyser.CHECKPOINT_MASK_LEN] + NotebookAnalyser.NOTEBOOK_SUFFIX
             workfile_path = os.path.join(workfile_dir, workfile_name)
 
-            status = ""
-            if not os.path.isfile(workfile_path):
-                if self._verbose:
-                    self.log(NotebookAnalyser.MESSAGE_ORPHANED, workfile_path, NotebookAnalyser.COLOR_RED)
-            else:
+            if os.path.isfile(workfile_path):
                 checkpoint_stat = os.stat(checkpoint_path)
                 workfile_stat = os.stat(workfile_path)
 
@@ -79,6 +76,8 @@ class NotebookAnalyser:
                     if not self._dry_run:
                         os.remove(checkpoint_path)
 
+            elif self._verbose:
+                self.log(NotebookAnalyser.MESSAGE_ORPHANED, workfile_path, NotebookAnalyser.COLOR_RED)
         if not self._dry_run and not os.listdir(directory):
             self.log(NotebookAnalyser.MESSAGE_DELETED, directory, NotebookAnalyser.COLOR_GREEN)
             os.rmdir(directory)

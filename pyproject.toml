@@ -1,0 +1,11 @@
+
+[tool.ruff]
+extend-exclude = ["docker/jupyter_notebook_config.py"]  # line 37, F821 Undefined name `c`
+line-length = 90
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "if __name__ == .__main__.:",
+    "def main\\(",
+]

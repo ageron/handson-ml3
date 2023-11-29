@@ -6,14 +6,14 @@ def remove_empty_directories(initial_dir,
     allow_initial_delete=False, ignore_nonexistant_initial=False,
     dry_run=False, quiet=False):
 
-    FORBIDDEN_SUBDIRS = set([".git"])
+    FORBIDDEN_SUBDIRS = {".git"}
 
     if not os.path.isdir(initial_dir) and not ignore_nonexistant_initial:
-        raise RuntimeError("Initial directory '{}' not found!".format(initial_dir))
+        raise RuntimeError(f"Initial directory '{initial_dir}' not found!")
 
     message = "removed"
     if dry_run:
-        message = "to be " + message
+        message = f"to be {message}"
 
     deleted = set()
 
@@ -28,11 +28,15 @@ def remove_empty_directories(initial_dir,
         if forbidden:
             continue
 
-        is_empty = len(files) < 1 and len(set([os.path.join(directory, s) for s in subdirs]) - deleted) < 1
+        is_empty = (
+            len(files) < 1
+            and len({os.path.join(directory, s) for s in subdirs} - deleted)
+            < 1
+        )
 
         if is_empty and (initial_dir != directory or allow_initial_delete):
             if not quiet:
-                print("{}: {}".format(message, directory))
+                print(f"{message}: {directory}")
             deleted.add(directory)
             if not dry_run:
                 os.rmdir(directory)

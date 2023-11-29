@@ -11,15 +11,15 @@ dependencies:
   - ipywidgets=8.1  # optionally used only in chapter 12 for tqdm in Jupyter
   - joblib=1.3  # used only in chapter 2 to save/load Scikit-Learn models
   - jupyterlab=4.0  # to edit and run Jupyter notebooks
-  - matplotlib=3.8  # beautiful plots. See tutorial tools_matplotlib.ipynb
+  - matplotlib >= 3.7.3  # beautiful plots. See tutorial tools_matplotlib.ipynb
   - nbdime=3.2  # optional tool to diff Jupyter notebooks
   - nltk=3.8  # optionally used in chapter 3, exercise 4
   - numexpr=2.8  # used only in the Pandas tutorial for numerical expressions
-  - numpy=1.26  # Powerful n-dimensional arrays and numerical computing tools
-  - pandas=2.1  # data analysis and manipulation tool
+  - numpy >= 1.25.2  # Powerful n-dimensional arrays and numerical computing tools
+  - pandas >= 2.0.3  # data analysis and manipulation tool
   - pillow=10.1  # image manipulation library, (used by matplotlib.image.imread)
   - pip  # Python's package-management system
-  - py-xgboost=1.7  # used only in chapter 6 for optimized Gradient Boosting
+  - py-xgboost >= 1.7  # used only in chapter 6 for optimized Gradient Boosting
   - pydot=1.4  # used only for in chapter 10 for tf.keras.utils.plot_model()
   - python=3.10  # your beloved programming language! :)
   - requests=2.31  # used only in chapter 19 for REST API queries
@@ -43,3 +43,16 @@ dependencies:
     - gym[classic_control,atari,accept-rom-license]  # used only in ch18
     - google-cloud-aiplatform~=1.36.2  # used only in chapter 19
     - google-cloud-storage~=2.13.0  # used only in chapter 19
+    - beartype >= 0.16.4
+    - black[jupyter] >= 23.11.0
+    - hypothesis >= 6.88.4
+    - isort >= 5.12.0
+    - mypy >= 1.7.0
+    - nbstripout >= 0.6.1
+    - pre-commit >= 3.5.0
+    - pytest-cov >= 4.1.0
+    - ruamel.yaml >= 0.18.5
+    - ruff >= 0.1.5
+    - typer >= 0.9.0
+    - uszipcode >= 1.0.1
+    - ydata-profiling >= 4.6.1
