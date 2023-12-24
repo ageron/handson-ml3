@@ -6,7 +6,7 @@ from pathlib import Path
 def repo_top() -> Path:
     """Returns the top directory of the handson-ml3 repository in a portable way."""
     # Result is same as `git rev-parse --show-toplevel`, without forking a child.
-    return Path(__file__).parent.parent.resolve()
+    return Path(__file__ + "../../../..").resolve()
 
 
 def constant() -> Path:

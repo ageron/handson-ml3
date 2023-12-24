@@ -18,6 +18,7 @@ my_*
 
 *.swp
 .DS_Store
+.coverage
 .idea/
 constant/out/
 constant/private/

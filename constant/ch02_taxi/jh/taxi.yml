@@ -1,0 +1,12 @@
+db_file: /tmp/constant/taxi.db
+grand_central_nyc:
+- 40.752
+- -73.978
+service_radius: 150000
+trip_count: 100000
+ul:
+- 41.319
+- -74.562
+lr:
+- 40.434
+- -72.711

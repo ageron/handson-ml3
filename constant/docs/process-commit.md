@@ -53,6 +53,8 @@ Create a new issue if there's still more to do.
 It should be rare that you have more than
 one or two branches at a time.
 
+`git fetch --prune` will remove any stale local tracking branches.
+
 Read and critique your own code before assigning any review tasks.
 Delete commented code, tidy up TODOs, try to make
 it easy for the reviewer to understand your proposed changes.
