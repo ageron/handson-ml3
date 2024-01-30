@@ -28,7 +28,7 @@ transformers~=4.35.0
 # installation instructions.
 
 tensorflow~=2.14.0
-keras-core
+
 # Optional: the TF Serving API library is just needed for chapter 18.
 tensorflow-serving-api~=2.14.0  # or tensorflow-serving-api-gpu if gpu
 
@@ -43,9 +43,9 @@ keras-tuner~=1.4.6
 ##### Reinforcement Learning library (chapter 18)
 
 # There are a few dependencies you need to install first, check out:
-# https://github.com/openai/gym#installing-everything
-gym[Box2D,atari,accept-rom-license]~=0.26.2
-
+# https://github.com/Farama-Foundation/Gymnasium
+swig~=4.1.1
+gymnasium[Box2D,atari,accept-rom-license]~=0.29.1
 # WARNING: on Windows, installing Box2D this way requires:
 # * Swig: http://www.swig.org/download.html
 # * Microsoft C++ Build Tools:
