@@ -138,7 +138,7 @@ $ docker run --name handson-ml3 --gpus all -p 8888:8888 -p 6006:6006 --log-opt m
 
 If you are using an older version of Docker, then replace `--gpus all` with `--runtime=nvidia`.
 
-Now point your browser to the displayed URL: Jupyter should appear, and you can open a notebook and run `import tensorflow as tf` and `tf.config.list_physical_devices("GPU)` as above to confirm that TensorFlow does indeed see your GPU device(s).
+Now point your browser to the displayed URL: Jupyter should appear, and you can open a notebook and run `import tensorflow as tf` and `tf.config.list_physical_devices("GPU")` as above to confirm that TensorFlow does indeed see your GPU device(s).
 
 Lastly, to interrupt the server, press Ctrl-C, then run:
 
