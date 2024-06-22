@@ -133,7 +133,6 @@ RUN set -x && \
 
 # Now we're ready to create our conda environment
 
-COPY ../environment.yml /tmp/
 COPY environment.yml /tmp/
 RUN conda env create -f /tmp/environment.yml \
     && conda clean -afy \
