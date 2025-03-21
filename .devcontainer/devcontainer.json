@@ -1,0 +1,34 @@
+{
+  "name": "handson-ml3",
+  "build": {
+    "context": "../docker",
+    "dockerfile": "Dockerfile"
+  },
+  "forwardPorts": [
+    6006,
+    8888
+  ],
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "python.defaultInterpreterPath": "/opt/conda/envs/homl3"
+      },
+      "extensions": [
+        "ms-azuretools.vscode-docker",
+        "ms-python.python",
+        "ms-toolsai.jupyter"
+      ]
+    }
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/nvidia-cuda:1": {
+      "cudaVersion": "11.8",
+      "installCudnn": true
+    }
+  },
+  "hostRequirements": {
+    "gpu": "optional"
+  },
+  "updateContentCommand": "conda init",
+  "postStartCommand": "/opt/conda/envs/homl3/bin/jupyter notebook --ip='0.0.0.0' --port=8888 --no-browser"
+}
