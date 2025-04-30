@@ -54,7 +54,7 @@ Next, run the following commands:
 
 Finally, start Jupyter:
 
-    $ jupyter notebook
+    $ jupyter lab --ip='0.0.0.0' --port=8888 --no-browser
 
 If you need further instructions, read the [detailed installation instructions](INSTALL.md).
 
