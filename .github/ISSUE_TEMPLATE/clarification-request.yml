@@ -18,19 +18,19 @@ body:
     id: chapter
     attributes:
       label: Enter the chapter number
-      placeholder: Chapter
+      placeholder: E.g., Chapter 2, end to end project
     validations:
       required: true
   - type: input
     id: page
     attributes:
       label: Enter the page number
-      placeholder: E.g., page 123, first paragraph
+      placeholder: E.g., Page 123, second code example
   - type: input
     id: cell
     attributes:
-      label: Enter the cell number
-      placeholder: E.g., Cell 78, in the second section
+      label: What is the cell's number in the notebook
+      placeholder: E.g., Cell 123, in gradient descent section
   - type: dropdown
     id: environment
     attributes:

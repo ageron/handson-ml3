@@ -18,19 +18,19 @@ body:
     id: chapter
     attributes:
       label: Enter the chapter number
-      placeholder: Chapter
+      placeholder: E.g., Chapter 2, end to end project
     validations:
       required: true
   - type: input
     id: page
     attributes:
       label: Enter the page number
-      placeholder: Page number
+      placeholder: E.g., Page 123, second code example
   - type: input
     id: cell
     attributes:
-      label: Enter the cell number
-      placeholder: Cell number
+      label: What is the cell's number in the notebook
+      placeholder: E.g., Cell 123, in gradient descent section
   - type: dropdown
     id: environment
     attributes:
@@ -59,16 +59,16 @@ body:
     id: description
     attributes:
       label: Describe your issue
-      placeholder: I got an error when running cell number...
+      placeholder: I got an error when running...
     validations:
       required: true
   - type: textarea
     id: expected
     attributes:
       label: Enter what you expected to happen
-      placeholder: Expected result
+      placeholder: I expected...
   - type: textarea
     id: workaround
     attributes:
       label: If you found a workaround, describe it here
-      placeholder: Possible workaround
+      placeholder: I worked around the issue by...
