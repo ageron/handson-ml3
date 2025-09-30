@@ -1,0 +1,69 @@
+name: Feature or Improvement request
+description: Suggest an idea for this project
+title: "[feature] "
+labels: ["feature request"]
+assignees: ["ageron"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping us improve this project!
+
+        Before you submit this feature request, please:
+
+        * search for existing issues (both open and closed), as your feature request may already have been submitted: https://github.com/ageron/handson-ml3/issues?q=is%3Aissue
+        * make sure you are using the latest updated code and libraries: https://github.com/ageron/handson-ml3/blob/main/INSTALL.md#update-this-project-and-its-libraries
+        * read the FAQ: https://github.com/ageron/handson-ml3#faq
+  - type: input
+    id: chapter
+    attributes:
+      label: Enter the chapter number
+      placeholder: E.g., Chapter 2, end to end project
+    validations:
+      required: true
+  - type: input
+    id: page
+    attributes:
+      label: Enter the page number
+      placeholder: E.g., Page 123, second code example
+  - type: input
+    id: cell
+    attributes:
+      label: What is the cell's number in the notebook
+      placeholder: E.g., Cell 123, in gradient descent section
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Enter the environment you are using to run the notebook
+      options:
+        - Colab
+        - Kaggle
+        - Jupyter on Windows
+        - Jupyter on Linux
+        - Jupyter on MacOS
+        - Other (specify in description)
+  - type: markdown
+    attributes:
+      value: |
+        Please describe your idea below. If you want to include some code, please use code blocks like this:
+
+        ````
+        ```python
+        def inverse(x):
+            return 1 / x
+
+        result = inverse(0)
+        ```
+        ````
+  - type: textarea
+    id: idea
+    attributes:
+      label: Feature or improvement request
+      placeholder: It would be useful to have...
+    validations:
+      required: true
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Why is this needed?
+      placeholder: Describe the problem or limitation this feature would address

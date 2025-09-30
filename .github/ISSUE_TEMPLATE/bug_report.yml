@@ -1,0 +1,74 @@
+name: Bug report
+description: Create a report to help us improve
+title: "[bug] "
+labels: ["bug", "help wanted"]
+assignees: ["ageron"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping us improve this project!
+
+        Before you create this issue, please:
+
+        * search for existing issues (both open and closed), as your question may already have been answered: https://github.com/ageron/handson-ml3/issues?q=is%3Aissue
+        * make sure you are using the latest updated code and libraries: https://github.com/ageron/handson-ml3/blob/main/INSTALL.md#update-this-project-and-its-libraries
+        * read the FAQ: https://github.com/ageron/handson-ml3#faq
+  - type: input
+    id: chapter
+    attributes:
+      label: Enter the chapter number
+      placeholder: E.g., Chapter 2, end to end project
+    validations:
+      required: true
+  - type: input
+    id: page
+    attributes:
+      label: Enter the page number
+      placeholder: E.g., Page 123, second code example
+  - type: input
+    id: cell
+    attributes:
+      label: What is the cell's number in the notebook
+      placeholder: E.g., Cell 123, in gradient descent section
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Enter the environment you are using to run the notebook
+      options:
+        - Colab
+        - Kaggle
+        - Jupyter on Windows
+        - Jupyter on Linux
+        - Jupyter on MacOS
+        - Other (specify in description)
+  - type: markdown
+    attributes:
+      value: |
+        Please describe the problem and copy/paste the failing code using code blocks like this:
+
+        ````
+        ```python
+        def inverse(x):
+            return 1 / x
+
+        result = inverse(0)
+        ```
+        ````
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe your issue
+      placeholder: I got an error when running...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Enter what you expected to happen
+      placeholder: I expected...
+  - type: textarea
+    id: workaround
+    attributes:
+      label: If you found a workaround, describe it here
+      placeholder: I worked around the issue by...
