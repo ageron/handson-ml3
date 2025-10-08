@@ -1,7 +1,6 @@
 name: homl3
 channels:
   - conda-forge
-  - defaults
 dependencies:
   - box2d-py=2.3  # used only in chapter 18, exercise 8
   - ffmpeg=6.1  # used only in the matplotlib tutorial to generate animations
