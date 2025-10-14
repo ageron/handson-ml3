@@ -12,12 +12,12 @@
 ARG UBUNTU_VERSION=20.04
 
 ARG ARCH=
-ARG CUDA=11.2
-FROM nvidia/cuda${ARCH:+-$ARCH}:${CUDA}.1-base-ubuntu${UBUNTU_VERSION} as base
+ARG CUDA_BASE=11.2.2
+FROM nvidia/cuda:${CUDA_BASE}-base-ubuntu${UBUNTU_VERSION} as base
 # ARCH and CUDA are specified again because the FROM directive resets ARGs
 # (but their default value is retained if set previously)
 ARG ARCH
-ARG CUDA
+ARG CUDA=11.2
 ARG CUDNN=8.1.0.77-1
 ARG CUDNN_MAJOR_VERSION=8
 ARG LIB_DIR_PREFIX=x86_64
@@ -85,6 +85,7 @@ RUN ln -s /usr/local/cuda/lib64/stubs/libcuda.so /usr/local/cuda/lib64/stubs/lib
 
 ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
 ENV PATH /opt/conda/bin:/opt/conda/envs/homl3/bin:$PATH
+ENV CONDA_DEFAULT_ENV=homl3
 
 # Next we need to install miniconda
 
