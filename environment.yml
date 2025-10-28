@@ -10,6 +10,7 @@ dependencies:
   - ipywidgets=8.1  # optionally used only in chapter 12 for tqdm in Jupyter
   - joblib=1.3  # used only in chapter 2 to save/load Scikit-Learn models
   - jupyterlab=4.0  # to edit and run Jupyter notebooks
+  - jupyter=1.1  # to edit and run Jupyter notebooks (classical UI)
   - matplotlib=3.8  # beautiful plots. See tutorial tools_matplotlib.ipynb
   - nbdime=3.2  # optional tool to diff Jupyter notebooks
   - nltk=3.8  # optionally used in chapter 3, exercise 4
