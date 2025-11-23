@@ -32,9 +32,7 @@ import sklearn
 
 assert version.parse(sklearn.__version__) >= version.parse("1.0.1")
 
-
 # Let's define the default font sizes, to plot pretty figures:
-
 import matplotlib.pyplot as plt
 
 plt.rc('font', size=12)
@@ -45,14 +43,11 @@ plt.rc('ytick', labelsize=10)
 
 
 # Make this notebook's output stable across runs:
-
 import numpy as np
 
 np.random.seed(42)
 
-
 # # Code example 1-1
-
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
