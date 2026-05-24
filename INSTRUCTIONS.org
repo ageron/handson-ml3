@@ -1,0 +1,44 @@
+#+TITLE: Hands-on Machine Learning 3rd Edition - Setup Instructions
+#+AUTHOR: Development Environment
+#+DATE: 2026-01-19
+
+* Overview
+
+This guide will help you set up the development environment for the Hands-on Machine Learning 3rd Edition notebooks using Nix.
+
+* Prerequisites
+
+- Nix with flakes enabled
+
+* Setup Steps
+
+** 1. Enter the Nix Development Environment
+
+Navigate to the handson-ml3 directory and enter the Nix shell:
+
+#+begin_src bash
+cd handson-ml3
+nix develop
+#+end_src
+
+The flake will automatically:
+- Provide Python 3.10
+- Install micromamba (conda alternative)
+- Create the homl3 environment from =environment.yml= (first time only)
+- Activate the homl3 environment
+
+** 2. Install IPython Kernel (First Time Only)
+
+#+begin_src bash
+python -m ipykernel install --user --name=python3
+#+end_src
+
+** 3. Start Jupyter Notebook
+
+#+begin_src bash
+jupyter notebook
+#+end_src
+
+* That's it!
+
+The Jupyter notebook server will open in your default browser and you can start working with the notebooks.
