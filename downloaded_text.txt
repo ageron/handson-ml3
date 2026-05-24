@@ -1,0 +1,124 @@
+#
+# robots.txt for https://www.w3.org/
+#
+# $Id: robots.txt,v 1.100 2025/10/21 20:48:19 gerald Exp $
+#
+
+# the following settings apply to all bots
+User-agent: *
+# Blogs - WordPress
+# https://wordpress.org/documentation/article/search-engine-optimization/#robots-txt-optimization
+Disallow: /*/wp-admin/
+Disallow: /*/wp-includes/
+Disallow: /*/wp-content/plugins/
+Disallow: /*/wp-content/cache/
+Disallow: /*/wp-content/themes/
+Disallow: /blog/*/trackback/
+Disallow: /blog/*/feed/
+Disallow: /blog/*/comments/
+Disallow: /blog/*/category/*/*
+Disallow: /blog/*/*/trackback/
+Disallow: /blog/*/*/feed/
+Disallow: /blog/*/*/comments/
+Disallow: /blog/*/*?
+Disallow: /community/trackback/
+Disallow: /community/feed/
+Disallow: /community/comments/
+Disallow: /community/category/*/*
+Disallow: /community/*/trackback/
+Disallow: /community/*/feed/
+Disallow: /community/*/comments/
+Disallow: /community/*/category/*/*
+Disallow: /community/*?
+Disallow: /Consortium/Offices/trackback/
+Disallow: /Consortium/Offices/feed/
+Disallow: /Consortium/Offices/comments/
+Disallow: /Consortium/Offices/category/*/*
+Disallow: /Consortium/Offices/*/trackback/
+Disallow: /Consortium/Offices/*/feed/
+Disallow: /Consortium/Offices/*/comments/
+Disallow: /Consortium/Offices/*?
+# Wikis - Mediawiki
+# https://www.mediawiki.org/wiki/Manual:Robots.txt
+Disallow: /wiki/index.php?
+Disallow: /wiki/index.php/Help
+Disallow: /wiki/index.php/MediaWiki
+Disallow: /wiki/index.php/Special:
+Disallow: /wiki/index.php/Template
+Disallow: /wiki/Special:
+Disallow: /wiki/Help:
+Disallow: /wiki/Talk:
+Disallow: /wiki/skins/
+Disallow: /wiki/*/info
+Disallow: /wiki/*/edit
+Disallow: /wiki/*/history
+Disallow: /*/wiki/index.php?
+Disallow: /*/wiki/index.php/Help
+Disallow: /*/wiki/index.php/MediaWiki
+Disallow: /*/wiki/index.php/Special:
+Disallow: /*/wiki/index.php/Template
+Disallow: /*/wiki/Special:
+Disallow: /*/wiki/Help:
+Disallow: /*/wiki/Talk:
+Disallow: /*/wiki/skins/
+Disallow: /*/wiki/*/info
+Disallow: /*/wiki/*/edit
+Disallow: /*/wiki/*/history
+# various other access-controlled or expensive areas
+Disallow: /2004/ontaria/basic
+Disallow: /Member/
+Disallow: /Team/
+Disallow: /Project/
+Disallow: /Web/
+Disallow: /Systems/
+Disallow: /Out-Of-Date
+Disallow: /2005/06/blog/
+Disallow: /2004/08/W3CTalks
+Disallow: /2007/11/Talks/search
+Disallow: /People/all/
+Disallow: /people/all/
+Disallow: /People/domain/
+Disallow: /people/domain/
+Disallow: /RDF/Validator/ARPServlet
+Disallow: /RDF/Validator/rdfval
+Disallow: /2003/03/Translations/byLanguage
+Disallow: /2003/03/Translations/byTechnology
+Disallow: /2005/11/Translations/Query
+Disallow: /2000/06/webdata/xslt
+Disallow: /2000/09/webdata/xslt
+Disallow: /2005/08/online_xslt/xslt
+Disallow: /Search/Mail/Public/
+Disallow: /2006/02/chartergen
+Disallow: /2004/01/pp-impl
+Disallow: /Consortium/supporters
+Disallow: /2012/pyRdfa/extract
+Disallow: /WAI/PF/comments/
+Disallow: /WAI/events/
+Disallow: /participate/conferences.xml
+Disallow: /scripts/
+Disallow: /2005/01/yacker/
+Disallow: /2005/01/yacker?
+Disallow: /2005/07/pubrules?
+Disallow: /ns/hydra/console/?
+Disallow: /2007/08/grddl/?
+Disallow: /2009/07/webidl-check?
+Disallow: /RDF/Validator/ARPServlet?
+Disallow: /2000/06/webdata/xsv?
+Disallow: /2000/09/webdata/xsv?
+Disallow: /Style/CSS/members.be/
+Disallow: /services
+Disallow: /2021/05/view-gallery/
+Disallow: /International/questions/qa-html-language-declarations/icons/
+Disallow: /International/questions/qa-html-language-declarations/qa-html-language-declarations-data/icons/
+Disallow: /*,*
+Disallow: /WAI/beta/
+Disallow: /WAI/ut1/
+Disallow: /WAI/ut2/
+Disallow: /WAI/ut3/
+Disallow: /WAI/ut4/
+Disallow: /WAI/drafts/
+
+# Allow W3C Link checker to check any paths on this site
+User-agent: W3C-checklink
+Disallow:
+
