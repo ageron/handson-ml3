@@ -11,6 +11,9 @@ python. It contains the example code and solutions to the exercises in the third
 ## Quick Start
 
 ### Want to play with these notebooks online without having to install anything?
+> **Note:** Most notebooks are intended to be run top-to-bottom.  
+> If you encounter missing packages or version conflicts, ensure your
+> Python environment matches the versions listed in the requirements.
 
 * <a href="https://colab.research.google.com/github/ageron/handson-ml3/blob/main/" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a> (recommended)
 
